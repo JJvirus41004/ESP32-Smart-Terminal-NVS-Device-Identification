@@ -1,11 +1,18 @@
-ESP-IDF template app
-====================
+# ESP32 Smart Terminal with NVS-backed Device Identification
 
-This is a template application to be used with [Espressif IoT Development Framework](https://github.com/espressif/esp-idf).
+This project implements a PC–ESP32 UART communication system using ESP-IDF.
+The ESP32 performs device identification and stores user-provided strings
+persistently in NVS flash. A PC-side application acts as a smart terminal,
+selectively requesting and retrieving only relevant data from the ESP32.
 
-Please check [ESP-IDF docs](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for getting started instructions.
+## Features
+- ESP-IDF based firmware (FreeRTOS)
+- UART-based PC ↔ ESP32 communication
+- Device identification mechanism
+- Persistent storage using NVS
+- Selective UART data filtering (smart terminal behavior)
 
-*Code in this repository is in the Public Domain (or CC0 licensed, at your option.)
-Unless required by applicable law or agreed to in writing, this
-software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied.*
+## Build & Flash
+```bash
+idf.py build
+idf.py flash monitor
