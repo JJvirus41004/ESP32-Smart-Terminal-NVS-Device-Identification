@@ -1,0 +1,8 @@
+# ESP-IDF build artifacts
+build/
+sdkconfig.old
+
+# IDE / editor files
+.settings/
+.cproject
+.project
